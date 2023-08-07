@@ -23,19 +23,20 @@ signed main()
 	{
 	    int n;
         cin>>n;
-        int arr[2*n];
-        int even=0,odd=0;
-        for(int i=0;i<2*n;i++)
+        int arr[n];
+        int sum=0;
+        for(int i=0;i<n;i++)
         {
             cin>>arr[i];
-            if(arr[i]%2)odd++;
-            else
-            even++;
+            sum=sum+arr[i];
+           
         }
-
-        if(odd==even)cout<<"Yes"<<endl;
+        if(sum>=n)cout<<sum-n<<endl;
         else
-        cout<<"No"<<endl;
+        {
+              cout<<"1"<<endl;
+        }
+    
 	}
 	return 0;
 	
