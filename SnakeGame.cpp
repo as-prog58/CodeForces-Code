@@ -1,0 +1,5 @@
+E:\Study related\CodeForces Code\faceDetection.cpp	In function 'int main()':
+37	4	E:\Study related\CodeForces Code\faceDetection.cpp	[Warning] 'void _sleep(long unsigned int)' is deprecated (declared at C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h:586) [-Wdeprecated-declarations]
+37	13	E:\Study related\CodeForces Code\faceDetection.cpp	[Warning] 'void _sleep(long unsigned int)' is deprecated (declared at C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h:586) [-Wdeprecated-declarations]
+47	4	E:\Study related\CodeForces Code\faceDetection.cpp	[Warning] 'void _sleep(long unsigned int)' is deprecated (declared at C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h:586) [-Wdeprecated-declarations]
+47	13	E:\Study related\CodeForces Code\faceDetection.cpp	[Warning] 'void _sleep(long unsigned int)' is deprecated (declared at C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdlib.h:586) [-Wdeprecated-declarations]
