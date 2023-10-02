@@ -4,15 +4,35 @@ using namespace std;
 
 int main()
 {
-    int a,b,c,d;
-    cin>>a>>b>>c>>d;
-    int m=max(3*a/(float)10,a-a/(float)250*c);
-    int v=max(3*b/(float)10,b-b/(float)250*d);
-    if(m>v)
-    cout<<"Misha";
-    else if(v>m)cout<<"Vasya";
-    else
-    cout<<"Tie";
+    int t;
+    cin>>t;
+    while(t--)
+    {
+    	int n;
+    	cin>>n;
+    	multimap<int,int>mapp;
+    	for(int i=0;i<n;i++)
+    	{
+    		int temp;
+    		cin>>temp;
+    		mapp.insert(pair<int,int>(temp,i));
+
+		}
+		
+		int arr[n]={0};
+		int j=n;
+		multimap<int, int>::iterator it;
+		 for ( it= mapp.begin(); it!= mapp.end(); it++) 
+		 {
+            arr[it->second]=j;
+            j--;
+        }
+        
+        for(int m=0;m<n;m++)
+        cout<<arr[m]<<" ";
+        
+        cout<<endl;
+	}
     
 	
 
