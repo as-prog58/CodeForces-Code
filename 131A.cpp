@@ -22,7 +22,7 @@ int main()
    		s[i]=s[i]-32;
 	
 	
-		else
+		
 		s[i]=s[i]+32;
 	
    }
