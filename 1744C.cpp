@@ -9,42 +9,45 @@ int main()
      cin>>t;
      while(t--)
      {
-     	long long int n;
-     	char c;
-     	cin>>n;
-     	cin>>c;
-     	string s;
-     	cin>>s;
-     	long long int maxi=0;
-     	if(n==1||c=='g')
-		 {
-     		cout<<"0"<<endl;
-     		continue;
-		 }
-		 vector<int>v;
-		 for(int i=0;i<n;i++)
-		 if(s[i]==c)v.push_back(i);
-     	for(int i=0;i<v.size();i++)
-     	{
-     		long long int cnt=0;
-     	
-     			int j=v[i]+1;
-     			if(j==n)j=0;
-     			for(;j<n;j++)
-     			{
-     			    cnt++;
-					 if(s[j]=='g')
-					 break;
-     				
-     				if(j==n-1)
-     				j=-1;
-				 }
-				 
-				 maxi=max(maxi,cnt);
-		 }
-		 
-		 
-		 cout<<maxi<<endl;
+      int n;
+        char c;
+        string s;
+        cin >> n >> c >> s;
+ 
+        int p = 0;
+        int greenPos[n];
+        for (int i = 0; i < n; i++)
+        {
+            if (s[i] == 'g')
+            {
+                greenPos[p] = i;
+                p++;
+            }
+        }
+        int countGreen = p;
+ 
+        int ans = 0;
+ 
+        p = 0;
+        for (int i = 0; i < n; i++)
+        {
+            if (s[i] != c)
+                continue;
+ 
+            while (p < countGreen && greenPos[p] < i)
+                p++;
+ 
+            if (p != countGreen)
+            {
+                ans = max(ans, greenPos[p] - i);
+            }
+            else
+            {
+                ans = max(ans, greenPos[0] + n - i);
+            }
+        }
+ 
+        cout << ans << endl;
 	 }
 
 	return 0;
