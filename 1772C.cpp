@@ -17,27 +17,27 @@ int main()
       cin>>k>>n;
       vector<int>ans;
        int rem_ele=n;
-       int c=0;
+       int c=1;
        int i=1;
        int not_filled=k;
-       while(rem_ele>not_filled)
+       while(i<=k)
        {
-       	c=(i*i-i+2)/2;
-       	i++;
+        c=(i*i-i+2)/2;
        	ans.push_back(c);
-       	not_filled--;
-       	rem_ele=n-c;
-       	
+       	i++;
 	   }
-	   int filled=k-not_filled;
-	   while(filled<=k)
-	   {
-	   	c++;
-	   	ans.push_back(c);
-	   	filled++;
-	   
-	   	
-	   }
+	    if(ans[k-1]>n)
+	    {
+	    	for(i=k-1;i>=0;i--)
+	    	{
+	    		if(ans[i]>n)
+	    		{
+	    			ans[i]=n;
+	    			n--;
+				}
+				else break;
+			}
+		}
 	   
 	   for(i=0;i<k;i++)
 	   cout<<ans[i]<<" ";
